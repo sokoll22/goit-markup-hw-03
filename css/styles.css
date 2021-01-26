@@ -91,13 +91,10 @@ p {
 
 /* Main flexbox for header */
 .header {
-  outline: 5px red dotted;
 } 
 .header .container {
   display: flex;
   align-items: center;
-
-  outline: 5px dotted ;
 }
 
 /* ===Logo style=== */
@@ -174,7 +171,7 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   }
-  ƒ
+  
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
@@ -187,22 +184,18 @@ p {
 /* ==== Index HTML ==== */
 /* ====Hero==== */
 .hero {
-  outline: 5px black dashed;
-
   color: var(--main-background-color);
+  background-color: var(--hero-background-color);
   font-size: 44px;
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.06em;
-  
-}
-.hero .container {
-  outline: 5px dotted red;
-  background-color: var(--hero-background-color);
+
   padding-top: 200px;
   padding-bottom: 200px;
   margin-bottom: 94px;
 }
+
 .hero-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -224,9 +217,6 @@ p {
 .features .container {
   display: flex;
   margin-bottom: 94px;
-
-  background-color: #acace6;
-  outline: 5px black dashed;
 }
 .features-list {
   display: flex;
@@ -240,7 +230,6 @@ p {
 }
 
 .feature-title {
-  background-color: #947474;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -250,7 +239,6 @@ p {
   margin-bottom: 10px;
 }
 .feature-text {
-  background-color: rgb(240, 195, 195);
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 14px;
@@ -264,15 +252,9 @@ p {
 
 /* ---what we do--- */
 .our-works .container {
-  outline: 5px dotted ;
-  background-color: rgb(204, 171, 171);
-
-margin-bottom: 94px;
+  margin-bottom: 94px;
 }
 .works-title {
-  background-color: #ccc;
-  outline: 5px dotted yellowgreen;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -295,8 +277,6 @@ margin-bottom: 94px;
   background-color: var(--secondary-background-color);
 }
 .team .container {
-  outline: 5px dotted;
-  background-color: rgb(209, 188, 238);
   margin-bottom: 94px;
 }
 .team-members {
@@ -319,7 +299,7 @@ margin-bottom: 94px;
   align-items: center;
   background-color: var(--main-background-color);
   margin: 15px;
-  margin-bottom: -15px;/
+  margin-bottom: -15px;
 }
 .member-card-content {
   display: flex;
@@ -346,75 +326,96 @@ margin-bottom: 94px;
 /* ===== End Index.HTML ===== */
 
 /* === Portfolio CSS === */
-/* ====Hero заменить на .portfolio-hero v portfolio.html ==== */
-.portfolio-hero {
-  color: var(--main-background-color);
-  background-color: var(--hero-background-color);
-  font-size: 44px;
-  line-height: 1.4;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
-.portfolio-hero-button {
-    color: var(--main-background-color);
-    background-color: var(--accent-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
-}
-/* ====End hero=== */
-
-/*====Features==== */
-.feature-title {
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-text-transform: uppercase;
-}
-.feature-text {
-  color: var(--secondary-text-color);
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-}
-/*----End features---- */
-
-/* ---what we do--- */
-.works-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+.main-container {
+  margin-top: 94px;
+  margin-bottom: 94px;
 }
 
-/* ---end what we do--- */
+/* Filter buttons */
 
-/* == Our team === */ 
-.team {
-  background-color: var(--secondary-background-color);
+.filters .container {
+ 
 }
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
-.member-card {
-  background-color: var(--main-background-color);
+.filter-buttons-item:not(:last-child) {
+  margin-right: 8px;
 }
-.member-name {
+
+.filter-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.62;
+
+  border: 0;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
 }
-.member-position {
+.filter-buttons .filter-name{
+  color: var(--primary-text-color);
+  background-color: #F5F4FA;
+}
+.filter-buttons .filter-name:hover,
+.filter-buttons .filter-name:focus {
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+}
+.filter-buttons .filter-name:hover,
+.filter-buttons .filter-name:focus {
+  color: var(--main-background-color);
+}
+  /* ==== Portfolio  cards */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -15px;
+}
+.card {
+  margin: 15px;
+}
+.card-list .filter-name {
+  padding: 0;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+.card-header {
+  margin-bottom: 4px;
+}
+
+/* === Portfolio Cards === */
+.card-header {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.0;
+  letter-spacing: 0.06em;
+}
+.card .filter-name {
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.87;
 }
-/* === end our team === */
+.card-list .card-header {
+  color: var(--primary-text-color);
+}
+.card-text {
+  color: var(--accent-color);
+}
+  /*----End  fortfolio features---- */
+  
+
 /* === End portfolio CSS === */
 
 
@@ -429,10 +430,7 @@ text-transform: uppercase;
 .footer .container {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
 
-  outline: 2px red dotted;
-  /* width: 1200px; */
 }
 .adress {
   color: var(--footer-adress-color);
