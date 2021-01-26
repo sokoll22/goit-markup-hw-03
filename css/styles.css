@@ -1,0 +1,456 @@
+/* цвет основного текста color: #212121;
+цвет вторичного текста   color: #757575;
+основной цвет background: #FFFFFF;
+цвет Hero & footer #2F303A
+синий цвет #2196F3
+цвет background команды #F5F4FA
+ */
+
+  /* Declaring Variables */
+  :root {
+    --accent-color: #2196F3;
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --main-background-color: #ffffff;
+    --secondary-background-color: #F5F4FA;
+    --hero-background-color: #2F303A;
+    --footer-background-color: #2F303A;
+    --footer-adress-color: rgba(255, 255, 255, 1);
+    --footer-link-color: rgba(255,255,255,0.6);
+    --logo-footer-second-part-color: #ffffff;
+    --logo-header-second-part-color: #000000;
+}
+
+
+
+body {
+color: var(--primary-text-color);
+  background-color: var(--main-background-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+/* Deleteted space around img */
+img {
+  display: block;
+}
+/* Class visually-hidden for headers */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Fonts for headers & margin reset */
+h1, h2, h3, h4,h5,h6 {
+  font-family: Roboto;
+  margin: 0;
+}
+/* Margin reset for lists */
+ul, 
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Pharagraphs margin reset */
+p {
+  margin: 0;
+}
+/* --link decoration --*/
+.link {
+  text-decoration: none;
+  color: var(--footer-link-color);
+}
+/* --- end link decoration */
+
+/* Ul List decoration  class */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.adress {
+  font-style: normal;
+}
+/* end list decoration */
+
+/*======Header===== */
+
+/* -- Container -- */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* === end container === */
+
+/* Main flexbox for header */
+.header {
+  outline: 5px red dotted;
+} 
+.header .container {
+  display: flex;
+  align-items: center;
+
+  outline: 5px dotted ;
+}
+
+/* ===Logo style=== */
+.logo {
+  display: block;
+  align-items: center;
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.header .logo {
+  margin-right: 93px;
+}
+
+.logo-header {
+  color: var(--primary-text-color);
+}
+.logo-footer {
+  color: var(--logo-footer-second-part-color);
+}
+/* === end logo style === */
+
+/* Site nav */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+/*  */
+.site-nav-item {
+}
+.site-nav .site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+/* Contacts nav flexbox */
+.contacts {
+    display: flex;
+    margin-left: auto;
+} 
+/* Only for background color -- later to delete */
+.contacts-item {
+}
+/* Adding margin-left for all ".contact .items"
+ except first one. Reading from bottom to top item. 
+ Same to ":not(:last-child) function */
+.contacts-item + .contacts-item {
+  margin-left: 50px;
+}
+.contacts .link {
+  display: block;
+  padding-top: 41px;
+  padding-bottom: 32px;
+
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  }
+  ƒ
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+/* == end nav == */
+/* ====End header=== */
+
+
+/* ==== Main CSS */
+/* ==== Index HTML ==== */
+/* ====Hero==== */
+.hero {
+  outline: 5px black dashed;
+
+  color: var(--main-background-color);
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.06em;
+  
+}
+.hero .container {
+  outline: 5px dotted red;
+  background-color: var(--hero-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
+}
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero-button {
+    color: var(--main-background-color);
+    background-color: var(--accent-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+
+    min-width: 200px;
+    padding: 10px 32px;
+  }
+/* ====End hero=== */
+
+/*====Features==== */
+.features .container {
+  display: flex;
+  margin-bottom: 94px;
+
+  background-color: #acace6;
+  outline: 5px black dashed;
+}
+.features-list {
+  display: flex;
+}
+.feature-item {
+  min-width: 270px;
+}
+
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature-title {
+  background-color: #947474;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.feature-text {
+  background-color: rgb(240, 195, 195);
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*----End features---- */
+
+/* ---what we do--- */
+.our-works .container {
+  outline: 5px dotted ;
+  background-color: rgb(204, 171, 171);
+
+margin-bottom: 94px;
+}
+.works-title {
+  background-color: #ccc;
+  outline: 5px dotted yellowgreen;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+.work-title-list {
+  display: flex;
+  justify-content: space-between;
+}
+.work-title-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ---end what we do--- */
+
+/* == Our team === */ 
+.team {
+  background-color: var(--secondary-background-color);
+}
+.team .container {
+  outline: 5px dotted;
+  background-color: rgb(209, 188, 238);
+  margin-bottom: 94px;
+}
+.team-members {
+  display: flex;
+  justify-content: space-between;
+  margin: -15px;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-background-color);
+  margin: 15px;
+  margin-bottom: -15px;/
+}
+.member-card-content {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.member-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  padding-bottom: 10px;
+  align-self: center;
+}
+.member-position {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  align-self: center;
+}
+/* --- end our team --- */
+/* ===== End Index.HTML ===== */
+
+/* === Portfolio CSS === */
+/* ====Hero заменить на .portfolio-hero v portfolio.html ==== */
+.portfolio-hero {
+  color: var(--main-background-color);
+  background-color: var(--hero-background-color);
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.portfolio-hero-button {
+    color: var(--main-background-color);
+    background-color: var(--accent-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+}
+/* ====End hero=== */
+
+/*====Features==== */
+.feature-title {
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+}
+.feature-text {
+  color: var(--secondary-text-color);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+/*----End features---- */
+
+/* ---what we do--- */
+.works-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+/* ---end what we do--- */
+
+/* == Our team === */ 
+.team {
+  background-color: var(--secondary-background-color);
+}
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+.member-card {
+  background-color: var(--main-background-color);
+}
+.member-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+.member-position {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+}
+/* === end our team === */
+/* === End portfolio CSS === */
+
+
+/* ===Footer==== */
+.footer {
+  display: flex;
+  background-color: var(--footer-background-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+
+  outline: 2px red dotted;
+  /* width: 1200px; */
+}
+.adress {
+  color: var(--footer-adress-color);
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+.footer.adress {
+  padding-top: 20px;
+}
+/* bakcground only for make up */
+.footer .logo {
+  padding-top: 60px;
+}
+.footer-list-item:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+/* ===End footer */

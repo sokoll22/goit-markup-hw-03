@@ -1,0 +1,200 @@
+/* цвет основного текста color: #212121;
+цвет вторичного текста   color: #757575;
+основной цвет background: #FFFFFF;
+цвет Hero & footer #2F303A
+синий цвет #2196F3
+цвет background команды #F5F4FA
+ */
+
+  /* Declaring Variables */
+  :root {
+    --accent-color: #2196F3;
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --main-background-color: #ffffff;
+    --secondary-background-color: #F5F4FA;
+    --hero-background-color: #2F303A;
+    --footer-background-color: #2F303A;
+    --footer-adress-color: rgba(255, 255, 255, 1);
+    --footer-link-color: rgba(255,255,255,0.6);
+    --logo-footer-second-part-color: #ffffff;
+    --logo-header-second-part-color: #000000;
+}
+
+
+
+body {
+color: var(--primary-text-color);
+  background-color: var(--main-background-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Class visually-hidden for headers */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Fonts for headers */
+h1, h2, h3, h4,h5,h6 {
+  font-family: Roboto;
+}
+/* end fonts for headers */
+
+/* --link decoration --*/
+.link {
+  text-decoration: none;
+  color: var(--footer-link-color);
+}
+/* --- end link decoration */
+
+/* Ul List decoration  class */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* end list decoration */
+
+/*======Header===== */
+
+/* -- Container -- */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* === end container === */
+/* Main flexbox for header */
+.container.header {
+  display: flex;
+  align-items: center;
+} 
+
+.page-header {
+  outline: 2px solid red;
+  margin-top: 5px;
+}
+
+/* ===Logo style=== */
+.logo {
+  display: block;
+  margin-right: 92px;
+
+  align-items: center;
+  color: var(--accent-color);
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.2;
+
+  /* padding-top: 33px;
+  padding-bottom: 25px; */
+}
+.header .logo{
+  justify-content: flex-end;
+  align-items: center;
+}
+.logo-header {
+  color: var(--primary-text-color);
+}
+.logo-footer {
+  color: var(--logo-footer-second-part-color);
+}
+/* === end logo style === */
+
+/* Site nav */
+.site-nav {
+  display: flex;
+  margin-left: 92px;
+}
+/* Only for background color -- later to delete */
+.site-nav .item {
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav .link {
+  display: block;
+  padding-top: 41px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+/* Contacts nav flexbox */
+.contacts {
+    display: flex;
+    margin-left: auto;
+} 
+/* Only for background color -- later to delete */
+.contacts .item {
+}
+/* Adding margin-left for all ".contact .items"
+ except first one. Reading from bottom to top item. 
+ Same to ":not(:last-child) function */
+.contacts .item + .item {
+  margin-left: 50px;
+}
+.contacts .link {
+  display: block;
+  padding-top: 41px;
+  padding-bottom: 32px;
+
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  }
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+/* == end nav == */
+
+/* ====End header=== */
+
+/* ===Footer==== */
+.footer {
+  background-color: var(--footer-background-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.footer-container {
+  outline: 2px red dotted;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.adress {
+  color: var(--footer-adress-color);
+}
+.footer .logo {
+  margin-top: 60px;
+}
+.footer.adress {
+  margin-top: 20px;
+}
+
+/* bakcground only for make up */
+.footer .logo {
+  /* background-color: green; */
+}
+/* ===End footer */

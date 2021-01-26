@@ -1,0 +1,42 @@
+
+/* Filter buttons */
+.filter-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+}
+.filter-buttons .filter-name{
+  color: var(--primary-text-color);
+  background-color: #F5F4FA;
+}
+.filter-buttons .filter-name:hover,
+.filter-buttons .filter-name:focus {
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+}
+.filter-buttons .filter-name:hover,
+.filter-buttons .filter-name:focus {
+  color: var(--main-background-color);
+}
+
+/* === Portfolio Cards === */
+.card-header {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.0;
+  letter-spacing: 0.06em;
+}
+.card .filter-name {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
+.card-list .card-header {
+  color: var(--primary-text-color);
+}
+.card-text {
+  color: var(--accent-color);
+}
+
+/* === end portfolio cards === */
