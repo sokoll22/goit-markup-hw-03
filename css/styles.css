@@ -89,6 +89,11 @@ p {
 }
 /* === end container === */
 
+/* ===Section padding 94px */
+.section-padding-bottom {
+  padding-bottom: 94px;
+}
+
 /* Main flexbox for header */
 .header {
 } 
@@ -162,7 +167,7 @@ p {
 }
 .contacts .link {
   display: block;
-  padding-top: 41px;
+  padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--secondary-text-color);
@@ -171,7 +176,7 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   }
-  
+
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
@@ -193,7 +198,6 @@ p {
 
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-bottom: 94px;
 }
 
 .hero-title {
@@ -203,10 +207,12 @@ p {
 .hero-button {
     color: var(--main-background-color);
     background-color: var(--accent-color);
+    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
+    cursor: pointer;
 
     min-width: 200px;
     padding: 10px 32px;
@@ -214,9 +220,11 @@ p {
 /* ====End hero=== */
 
 /*====Features==== */
+.features {
+  padding-top: 94px;
+}
 .features .container {
   display: flex;
-  margin-bottom: 94px;
 }
 .features-list {
   display: flex;
@@ -252,7 +260,6 @@ p {
 
 /* ---what we do--- */
 .our-works .container {
-  margin-bottom: 94px;
 }
 .works-title {
   font-weight: 700;
@@ -277,7 +284,6 @@ p {
   background-color: var(--secondary-background-color);
 }
 .team .container {
-  margin-bottom: 94px;
 }
 .team-members {
   display: flex;
@@ -340,6 +346,8 @@ p {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  font-family: inherit;
+  cursor: pointer;
 }
 .filter-buttons-item:not(:last-child) {
   margin-right: 8px;
