@@ -96,6 +96,9 @@ p {
 
 /* Main flexbox for header */
 .header {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(236, 236, 236, 1);
 } 
 .header .container {
   display: flex;
@@ -201,11 +204,13 @@ p {
 
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-bottom: 94px;
 }
 
 .hero-title {
   margin-top: 0;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 .hero-button {
     color: var(--main-background-color);
@@ -217,6 +222,9 @@ p {
     letter-spacing: 0.06em;
     cursor: pointer;
 
+    border: 0;
+    border-radius: 4px;
+
     min-width: 200px;
     padding: 10px 32px;
   }
@@ -224,7 +232,6 @@ p {
 
 /*====Features==== */
 .features {
-  padding-top: 94px;
 }
 .features .container {
   display: flex;
@@ -309,7 +316,12 @@ p {
   background-color: var(--main-background-color);
   margin: 15px;
   margin-bottom: -15px;
-}
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px; 
+} 
 .member-card-content {
   display: flex;
   flex-direction: column;
@@ -335,15 +347,12 @@ p {
 /* ===== End Index.HTML ===== */
 
 /* === Portfolio CSS === */
-.main-container {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
 
 /* Filter buttons */
 
 .filters .container {
- 
+  padding-top: 94px;
+  margin-bottom: 94px;
 }
 .filter-buttons {
   display: flex;
@@ -389,6 +398,7 @@ p {
 }
 .card {
   margin: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .card-list .filter-name {
   padding: 0;
@@ -441,7 +451,8 @@ p {
 .footer .container {
   display: flex;
   flex-direction: column;
-
+  padding-top: 60px;
+  margin-bottom: 60px;
 }
 .adress {
   color: var(--footer-adress-color);
@@ -449,14 +460,12 @@ p {
 .footer-list {
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px;
 }
 .footer.adress {
   padding-top: 20px;
 }
 /* bakcground only for make up */
 .footer .logo {
-  padding-top: 60px;
 }
 .footer-list-item:not(:last-child) {
   padding-bottom: 9px;
