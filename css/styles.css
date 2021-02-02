@@ -116,6 +116,8 @@ p {
 }
 .header .logo {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo-header {
@@ -307,7 +309,7 @@ p {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .member-card {
   display: flex;
@@ -351,10 +353,13 @@ p {
 /* === Portfolio CSS === */
 
 /* Filter buttons */
+.filters {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .filters .container {
-  padding-top: 94px;
-  margin-bottom: 94px;
+  
 }
 .filter-buttons {
   display: flex;
@@ -451,12 +456,14 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer .container {
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
-  margin-bottom: 60px;
+  /* padding-top: 60px;
+  margin-bottom: 60px; */
 }
 .adress {
   color: var(--footer-adress-color);
@@ -470,9 +477,10 @@ p {
 }
 /* bakcground only for make up */
 .footer .logo {
+  margin-bottom: 20px;
 }
 .footer-list-item:not(:last-child) {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 /* ===End footer */
